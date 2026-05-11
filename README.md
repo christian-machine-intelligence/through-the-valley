@@ -10,7 +10,7 @@ Code, data, and paper accompanying:
 > Tim Hwang, Institute for a Christian Machine Intelligence
 > *ICMI Working Paper No. 22*, May 2026.
 
-[Read the paper](paper/as-i-walk-through-the-valley.md) · [Figure 1 (bare-Psalm fingerprint)](paper/figures/fig1_bare_psalm_fingerprint.png) · [Figure 2 (in-context shift)](paper/figures/fig2_in_context_shift.png)
+[Read the paper](paper/as-i-walk-through-the-valley.md) · [Figure 1 (bare-Psalm fingerprint)](paper/figures/fig1_bare_psalm_fingerprint.png) · [Figure 2 (behavioral shift)](paper/figures/fig2_behavioral_shift.png) · [Figure 3 (in-context shift)](paper/figures/fig3_in_context_shift.png)
 
 ## Summary
 
@@ -22,7 +22,7 @@ Prepending Psalm 23:4 to a 150-scenario fear-coded evaluation set raises Qwen 3.
 through-the-valley/
 ├── paper/
 │   ├── as-i-walk-through-the-valley.md   the paper itself
-│   └── figures/fig{1_bare_psalm_fingerprint,2_in_context_shift,3_mediation_scatter}.{png,pdf}
+│   └── figures/fig{1_bare_psalm_fingerprint,2_behavioral_shift,3_in_context_shift}.{png,pdf}
 ├── data/
 │   ├── pilot.csv          20 visceral-prose pilot scenarios (used for the
 │   │                      §3.3 pilot gate; referenced in the paper)
@@ -33,7 +33,8 @@ through-the-valley/
 │   ├── generate_scenarios.py          scenario generation via Claude Opus
 │   ├── eval_choice_sampled.py         A/B eval, temp 0.7, n=20 (Table 3)
 │   ├── mediation_analysis_27b.py      per-scenario activation projection on 171
-│   ├── plot_emotion_shift_27b.py      Figures 1 and 2 + per-emotion mediation stats
+│   ├── plot_emotion_shift_27b.py      Figures 1 + 3 + per-emotion mediation stats
+│   ├── plot_behavioral_shift.py       Figure 2 (per-scenario hit-rate distributions)
 │   └── bootstrap_mediation_ci.py      bootstrap CIs on per-mediator ρs (§4.4)
 ├── scripts/
 │   └── 01_generate_pilot.sh           wrapper around generate_scenarios.py
@@ -41,7 +42,7 @@ through-the-valley/
 │   ├── pilot_validation.json                     §3.3 pilot gate result
 │   ├── sampled_eval_qwen35-27b_{vanilla,psalm,wiki}.csv         Table 3 inputs
 │   ├── sampled_eval_qwen35-27b_{vanilla,psalm,wiki}_summary.json
-│   ├── mediation_qwen27b.csv                     Table 4 + Figure 2 inputs
+│   ├── mediation_qwen27b.csv                     Table 4 + Figure 3 inputs
 │   ├── mediation_qwen27b_summary.json            per-emotion mean Δ
 │   ├── mediation_qwen27b_stats.json              per-emotion ρ, p, BH-FDR, Bonferroni
 │   ├── bootstrap_mediation_ci.json               bootstrap CIs (§4.4)
@@ -98,16 +99,18 @@ Outputs:
 - `results/mediation_qwen27b_summary.json` (mean Δ per emotion + bare-Psalm projection)
 - `results/bare_psalm_qwen27b.json` (Figure 1 / Table 2 input)
 
-### 3. Figures 1 and 2 + mediation statistics
+### 3. Figures + mediation statistics
 
 ```bash
-python src/plot_emotion_shift_27b.py
+python src/plot_behavioral_shift.py    # Figure 2 (behavioral shift)
+python src/plot_emotion_shift_27b.py   # Figures 1 + 3 + per-emotion stats
 ```
 
-Renders two figures and writes the per-emotion mediation statistics that §4.4 reports:
+Renders three figures and writes the per-emotion mediation statistics that §4.4 reports:
 - `paper/figures/fig1_bare_psalm_fingerprint.{png,pdf}` — bare-Psalm cosine on each of the 171 emotion directions; top 20 + bottom 10 displayed.
-- `paper/figures/fig2_in_context_shift.{png,pdf}` — mean Psalm-induced Δ per emotion across 150 scenarios; top 15 + bottom 15 displayed.
-- `results/mediation_qwen27b_stats.json` — per-emotion Spearman ρ between activation Δ and behavioral hit-rate Δ, BH-FDR significance (n = 84 / 171), Bonferroni-corrected significance (n = 24 / 171).
+- `paper/figures/fig2_behavioral_shift.{png,pdf}` — per-scenario hit-rate distributions across the three conditions; Δ (Psalm − vanilla) histogram.
+- `paper/figures/fig3_in_context_shift.{png,pdf}` — mean Psalm-induced Δ per emotion across 150 scenarios; top 15 + bottom 15 displayed.
+- `results/mediation_qwen27b_stats.json` — per-emotion Spearman ρ between activation Δ and behavioral hit-rate Δ, BH-FDR significance (n = 94 / 171), Bonferroni-corrected significance (n = 42 / 171).
 
 ## Key Numbers
 

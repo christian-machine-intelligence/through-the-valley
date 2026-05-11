@@ -1,6 +1,9 @@
-"""Render Figures 1 and 2 on the 171-emotion basis at Qwen 3.5 27B layer 53,
+"""Render Figures 1 and 3 on the 171-emotion basis at Qwen 3.5 27B layer 53,
 and write the per-emotion mediation statistics (Spearman ρ, BH-FDR significance,
-Bonferroni significance) used by §4.3 of the paper.
+Bonferroni significance) used by §4.4 of the paper.
+
+(Figure 2 — behavioral-shift distributions — is produced by
+plot_behavioral_shift.py.)
 
 Inputs (must already exist locally — pull from Marx after running
 mediation_analysis_27b.py):
@@ -13,12 +16,12 @@ Figures:
   Figure 1. Bare Psalm 23:4 fingerprint — cosine of the bare Psalm against
             each emotion-direction vector. Top 20 + bottom 10 of 171, ranked
             by signed cosine.
-  Figure 2. In-context Psalm-induced shift — mean per-emotion Δ across the
+  Figure 3. In-context Psalm-induced shift — mean per-emotion Δ across the
             150 scenarios. Top 15 + bottom 15 of 171, ranked by signed Δ.
 
 Outputs:
   paper/figures/fig1_bare_psalm_fingerprint.{png,pdf}
-  paper/figures/fig2_in_context_shift.{png,pdf}
+  paper/figures/fig3_in_context_shift.{png,pdf}
   results/mediation_qwen27b_stats.json
 """
 
@@ -220,7 +223,7 @@ def figure_2_in_context(stats, emotions, n_scenarios):
     ax.set_xlim(-span, span)
     fig.tight_layout(rect=[0, 0.10, 1, 1])
     add_register_legend(fig, loc="lower center")
-    save(fig, "fig2_in_context_shift")
+    save(fig, "fig3_in_context_shift")
     plt.close(fig)
 
 
