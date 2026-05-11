@@ -2,7 +2,7 @@
 
 ![Albrecht Dürer, *Knight, Death, and the Devil* (1513). Engraving, National Gallery of Art, Washington D.C.](banner.jpg)
 
-> *Albrecht Dürer, **Knight, Death, and the Devil** (1513). Engraving, 24.6 × 19.0 cm. National Gallery of Art, Washington D.C. (Rosenwald Collection 1943.3.3519). The armored Christian rides through a dark wooded valley accompanied by Death (holding an hourglass) and the Devil (horned, behind). The knight looks straight ahead — fearing no evil.*
+> *Albrecht Dürer, **Knight, Death, and the Devil** (1513). Engraving, 24.6 × 19.0 cm. National Gallery of Art, Washington D.C. (Rosenwald Collection 1943.3.3519).
 
 Code, data, and paper accompanying:
 
