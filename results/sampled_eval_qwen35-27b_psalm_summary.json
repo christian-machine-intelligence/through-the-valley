@@ -1,0 +1,12 @@
+{
+  "model_id": "Qwen/Qwen3.5-27B",
+  "out_tag": "qwen35-27b-n20",
+  "prime_id": "psalm",
+  "n_scenarios": 150,
+  "n_runs_per_scenario": 20,
+  "temperature": 0.7,
+  "mean_hit_rate": 0.7640000000000005,
+  "n_perfect_hits": 44,
+  "n_perfect_misses": 1,
+  "n_fractional": 105
+}

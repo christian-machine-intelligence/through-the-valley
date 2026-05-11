@@ -1,0 +1,21 @@
+# Versions used to produce the paper's headline numbers.
+# The compute environment was a 6× RTX 4090 server (CUDA 12.8) running
+# Ubuntu; the laptop environment for figure rendering and analysis was
+# macOS with CPython 3.12.
+#
+# Pin tightly for exact reproduction; relax with care.
+
+# ── Core (eval + mediation; required for §4.2–§4.3 reproduction) ──
+torch==2.10.0          # GPU env shipped torch 2.10.0+cu128
+transformers==5.5.4    # tokenizer behavior on Qwen 3.5 changes across versions
+accelerate==1.13.0     # multi-GPU device_map="auto" backend
+numpy==2.2.6
+scipy==1.15.3          # spearmanr in plot_emotion_shift_27b.py
+
+# ── Figures + local analysis (laptop-side) ──
+matplotlib==3.10.8     # fig1_emotion_shift_27b.{png,pdf}
+
+# ── Scenario generation only (§3.4; not needed if using bundled scenarios.csv) ──
+anthropic==0.94.1
+python-dotenv          # .env loader for ANTHROPIC_API_KEY
+tqdm                   # progress bar in generate_scenarios.py

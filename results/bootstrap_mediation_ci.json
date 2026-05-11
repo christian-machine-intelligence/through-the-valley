@@ -1,0 +1,152 @@
+{
+  "n_bootstrap": 2000,
+  "n_scenarios": 150,
+  "n_emotions": 171,
+  "n_samples_per_eval": 20,
+  "observed_behav_delta_sd": 0.22602092516617875,
+  "avg_per_scenario_sampling_sd": 0.11962441222426132,
+  "estimated_reliability_of_delta": 0.7198811484024663,
+  "attenuation_factor_sqrt_reliability": 0.8484581005579865,
+  "top_20_mediators_with_ci": [
+    {
+      "emotion": "sorry",
+      "rho_point": 0.4137198700979291,
+      "rho_ci_lo": 0.26145732141370936,
+      "rho_ci_hi": 0.549398945853613,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "bitter",
+      "rho_point": 0.38753448749730596,
+      "rho_ci_lo": 0.23900852529437638,
+      "rho_ci_hi": 0.5218817084790315,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "offended",
+      "rho_point": 0.3868923796632315,
+      "rho_ci_lo": 0.23812334293315687,
+      "rho_ci_hi": 0.5216737659864542,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "grief-stricken",
+      "rho_point": 0.37166832701439656,
+      "rho_ci_lo": 0.2084936686093077,
+      "rho_ci_hi": 0.5279962588217259,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "compassionate",
+      "rho_point": 0.3695594213605825,
+      "rho_ci_lo": 0.21730918026476287,
+      "rho_ci_hi": 0.4968949117759128,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "kind",
+      "rho_point": 0.35804155202052135,
+      "rho_ci_lo": 0.20588145336472333,
+      "rho_ci_hi": 0.498063776850372,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "indignant",
+      "rho_point": 0.35550302146174606,
+      "rho_ci_lo": 0.2065414014433326,
+      "rho_ci_hi": 0.4909411934427223,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "envious",
+      "rho_point": 0.3483277507461066,
+      "rho_ci_lo": 0.20183790229636947,
+      "rho_ci_hi": 0.4785029639198313,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "remorseful",
+      "rho_point": 0.3405481528819948,
+      "rho_ci_lo": 0.18732291771746654,
+      "rho_ci_hi": 0.48291730769716656,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "smug",
+      "rho_point": 0.34014170276443806,
+      "rho_ci_lo": 0.20092835602148743,
+      "rho_ci_hi": 0.4765027322556308,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "bewildered",
+      "rho_point": 0.33894374452321824,
+      "rho_ci_lo": 0.1779719327133804,
+      "rho_ci_hi": 0.48106176803379,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "ashamed",
+      "rho_point": 0.33833941737474577,
+      "rho_ci_lo": 0.18540624426972613,
+      "rho_ci_hi": 0.4711479437324461,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "empathetic",
+      "rho_point": 0.33248154418925724,
+      "rho_ci_lo": 0.18512327736616804,
+      "rho_ci_hi": 0.4615348505441104,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "vindictive",
+      "rho_point": 0.32432223634690155,
+      "rho_ci_lo": 0.1740459568948245,
+      "rho_ci_hi": 0.4709762660232938,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "spiteful",
+      "rho_point": 0.3230672324751475,
+      "rho_ci_lo": 0.17133325971295277,
+      "rho_ci_hi": 0.4726674365824851,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "astonished",
+      "rho_point": 0.3225235163091177,
+      "rho_ci_lo": 0.17041039565986188,
+      "rho_ci_hi": 0.46023830497591606,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "suspicious",
+      "rho_point": 0.3189171628537789,
+      "rho_ci_lo": 0.1648771291425134,
+      "rho_ci_hi": 0.4696153725292626,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "defiant",
+      "rho_point": 0.3132393399396643,
+      "rho_ci_lo": 0.16342444650921095,
+      "rho_ci_hi": 0.460824234661891,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "shocked",
+      "rho_point": 0.3081480174144801,
+      "rho_ci_lo": 0.1601770004562514,
+      "rho_ci_hi": 0.4375437777062581,
+      "p_rho_gt_zero_bootstrap": 1.0
+    },
+    {
+      "emotion": "regretful",
+      "rho_point": 0.30740464154158037,
+      "rho_ci_lo": 0.15678887942312958,
+      "rho_ci_hi": 0.44602530676464025,
+      "p_rho_gt_zero_bootstrap": 1.0
+    }
+  ]
+}
